@@ -1,0 +1,18 @@
+/* Dallas — Transição Estrela → Logo (entre Seção 02 e 03) */
+.sl-scroll{position:relative;height:420vh}
+.sl-sticky{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.sl-logo{position:relative;width:min(86vw,1000px);aspect-ratio:2024/625;will-change:transform}
+.sl-star-slot{position:absolute;left:.1%;top:20.5%;width:5.63%;aspect-ratio:309/325}
+.sl-wing{position:absolute;left:4.55%;top:6.72%;width:7.46%;height:auto;max-width:none;opacity:0;transform-origin:0 50%;will-change:transform,opacity}
+.sl-text{position:absolute;left:6.08%;top:0;width:93.92%;height:auto;max-width:none;opacity:0;-webkit-mask-image:linear-gradient(90deg,#000 0%,transparent 0%);mask-image:linear-gradient(90deg,#000 0%,transparent 0%);will-change:opacity}
+.sl-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.sl-star-fly{position:fixed;left:0;top:0;width:309px;height:auto;max-width:none;z-index:60;pointer-events:none;transform-origin:50% 50%;visibility:hidden;will-change:transform}
+.sl-target{position:relative}
+.sl-star-anchor{position:absolute;top:-44px;right:-92px;width:118px;height:auto;opacity:0;pointer-events:none;z-index:45}
+@media (max-width:1023px){.sl-scroll{height:340vh}.sl-star-anchor{width:72px;top:-30px;right:0}}
+@media (prefers-reduced-motion:reduce){
+  .sl-scroll{height:auto}.sl-sticky{position:relative;height:auto;padding:12vh 0}
+  .sl-wing,.sl-text{opacity:1;-webkit-mask-image:none;mask-image:none}
+  .sl-star-slot{background:url(../img/anim/estrela.png) center/contain no-repeat}
+  .sl-star-fly{display:none}.sl-star-anchor{opacity:1}
+}
